@@ -15,6 +15,7 @@ public class GitTest {
         long time = System.currentTimeMillis();
         Date date = new Date(time);
         System.out.println(date);
+        System.out.println("666");
 
     }
 }
