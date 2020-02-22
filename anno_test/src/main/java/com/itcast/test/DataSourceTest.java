@@ -3,12 +3,26 @@ package com.itcast.test;
 import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.pool.DruidPooledConnection;
 import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import javax.sql.DataSource;
+import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Enumeration;
 import java.util.ResourceBundle;
 
 public class DataSourceTest {
+    @Test
+    public void test2() throws SQLException {
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
+        DataSource dataSource = applicationContext.getBean(DataSource.class);
+        Connection connection = dataSource.getConnection();
+        System.out.println("con:"+connection);
+
+
+
+    }
 
     @Test
     public void test1() throws SQLException {
