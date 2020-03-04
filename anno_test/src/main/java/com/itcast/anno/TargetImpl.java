@@ -1,7 +1,8 @@
-package com.itcast.aop;
+package com.itcast.anno;
 
-import org.aspectj.lang.ProceedingJoinPoint;
+import org.springframework.stereotype.Component;
 
+@Component("target")
 public class TargetImpl implements Target {
     public void save() {
         System.out.println("save something ");

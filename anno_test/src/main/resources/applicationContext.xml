@@ -15,7 +15,8 @@
     <!--配置织入-->
     <aop:config >
         <aop:aspect ref="aspect" >
-            <aop:after method="advice" pointcut="execution(public void com.itcast.aop.TargetImpl.save())"></aop:after>
+            <aop:around method="around" pointcut="execution(* com.itcast.aop.*.*(..))"></aop:around>
+            <!--<aop:after method="advice" pointcut="execution(* com.itcast.aop.*.*())"></aop:after>-->
         </aop:aspect>
     </aop:config>
 
